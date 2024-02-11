@@ -32,6 +32,7 @@ public class Pin : MonoBehaviour
         {
             transform.SetParent(other.transform);
             pinBar.GetComponent<SpriteRenderer>().enabled = true;
+            GameManager.instance.DecreaseScore();
             isPinned = true;
         }
     }
