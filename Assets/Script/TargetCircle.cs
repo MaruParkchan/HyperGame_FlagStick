@@ -21,6 +21,6 @@ public class TargetCircle : MonoBehaviour
 
     void Rotate()
     {
-        transform.Rotate(0,0, rotateSpeed);
+        transform.Rotate(0,0, rotateSpeed * Time.deltaTime);
     }
 }
