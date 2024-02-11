@@ -7,6 +7,7 @@ public class Pin : MonoBehaviour
     [SerializeField]
     float moveSpeed;
     bool isPinned;
+    bool isLanuch;
     [SerializeField] GameObject pinBar;
 
     private void Awake()
@@ -21,7 +22,7 @@ public class Pin : MonoBehaviour
 
     void Move()
     {
-        if (!isPinned)
+        if (!isPinned && isLanuch)
             transform.position += Vector3.up * moveSpeed * Time.deltaTime;
     }
 
@@ -33,5 +34,10 @@ public class Pin : MonoBehaviour
             pinBar.GetComponent<SpriteRenderer>().enabled = true;
             isPinned = true;
         }
+    }
+
+    public void Lannch()
+    {
+        isLanuch = true;
     }
 }
