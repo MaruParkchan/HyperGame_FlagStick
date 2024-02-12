@@ -35,6 +35,10 @@ public class Pin : MonoBehaviour
             GameManager.instance.DecreaseScore();
             isPinned = true;
         }
+        else if(other.CompareTag("Pin"))
+        {
+            GameManager.instance.SetGameOver(false);
+        }
     }
 
     public void Lannch()
